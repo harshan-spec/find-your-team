@@ -35,7 +35,7 @@ delete from team_private.rate_limits where started_at < now()-interval '48 hours
 
 ## AdSense readiness
 
-Original static editorial guides, navigation, About/contact, privacy, terms, safety, sitemap, robots, metadata, accessible forms, responsive layout, HTTPS, and content reporting are included. No publisher ID, placeholder ads.txt seller, fake listings, tracking, or ad scripts are added. Approval is Google's decision, not a test this repository can guarantee.
+Original static editorial guides, navigation, About/contact, privacy, terms, safety, sitemap, robots, metadata, accessible forms, responsive layout, HTTPS, and content reporting are included. The account's ownership meta tag (`ca-pub-2851684575995607`) and exact authorized seller entry in `public/ads.txt` are configured for AdSense verification. No tracking or ad scripts are enabled. Approval is Google's decision, not a test this repository can guarantee.
 
 Before enabling ads: secure AdSense approval for your owned domain, use the real publisher ID and authorized ads.txt line from Google, configure Google's required certified consent platform where applicable, update privacy disclosures, and restrict ads to reviewed editorial pages. Do not serve ads on unreviewed recruitment posts, report forms, empty/error views, or management screens. Do not ask users to click ads. Manual moderation must be actively operated by the owner.
 
