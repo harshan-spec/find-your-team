@@ -1,5 +1,5 @@
 import{readFileSync,writeFileSync,readdirSync}from'node:fs';
-const origin='https://findyourteam.vercel.app';
+const origin='https://findyourteam-ten.vercel.app';
 const css='/assets/'+readdirSync('dist/assets').find(x=>x.endsWith('.css'));
 const guides=[
 ['build-a-hackathon-team','How to find the right hackathon teammates','Build a small team around complementary skills, realistic availability, and a problem everyone understands.',[

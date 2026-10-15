@@ -6,7 +6,7 @@ let passed=0;
 function check(name,fn){fn();passed++;console.log('PASS '+name)}
 const files=readdirSync('dist').filter(f=>f.endsWith('.html'));
 for(const file of files){const html=readFileSync('dist/'+file,'utf8');check(file+' metadata and usable content',()=>{assert.match(html,/<html lang="en">/);assert.match(html,/<title>[^<]+/);assert.match(html,/<meta name="description"/);assert.match(html,/<h1>/);assert.doesNotMatch(html,/pub-\d+|adsbygoogle|lorem ipsum/i)});for(const match of html.matchAll(/(?:href|src)="(\/[^"?#]*)/g)){check(file+' local asset '+match[1],()=>assert.ok(existsSync('dist'+(match[1]==='/'?'/index.html':match[1]))))}}
-check('sitemap and robots',()=>{assert.ok(existsSync('dist/robots.txt'));assert.match(readFileSync('dist/sitemap.xml','utf8'),/findyourteam.vercel.app/)});
+check('sitemap and robots',()=>{assert.ok(existsSync('dist/robots.txt'));assert.match(readFileSync('dist/sitemap.xml','utf8'),/findyourteam-ten.vercel.app/)});
 const url=process.env.VITE_SUPABASE_URL,key=process.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 async function request(path,body,method=body?'POST':'GET'){const r=await fetch(url+'/rest/v1/'+path,{method,headers:{apikey:key,'Content-Type':'application/json',Prefer:'return=representation'},...(body?{body:JSON.stringify(body)}:{})});return{status:r.status,data:await r.text()}}
 let r=await request('team_posts?select=id,status&limit=1');check('anonymous browsing succeeds',()=>assert.equal(r.status,200));

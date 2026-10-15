@@ -4,7 +4,7 @@ A student collaboration board matching Attendly and BuyNsell's mint/forest-green
 
 ## Run
 
-Copy `.env.example` to `.env.local` and supply the Supabase project URL and publishable key. Never use a service-role key in VITE variables. Run `npm ci`, `npm run dev`, or `npm run build`. `npm run check` validates the generated site and anonymous database boundaries. Production uses `https://findyourteam.vercel.app` as its canonical origin; update `scripts/pages.mjs` if changing domains.
+Copy `.env.example` to `.env.local` and supply the Supabase project URL and publishable key. Never use a service-role key in VITE variables. Run `npm ci`, `npm run dev`, or `npm run build`. `npm run check` validates the generated site and anonymous database boundaries. Production uses `https://findyourteam-ten.vercel.app` as its canonical origin; update `scripts/pages.mjs` if changing domains.
 
 ## Database and ownership
 
